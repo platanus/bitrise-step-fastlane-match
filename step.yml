@@ -92,7 +92,7 @@ inputs:
       description: |-
         Password for decrypting the repository content
       is_required: true
-  - type:
+  - type: development
     opts:
       title: "Platform"
       summary: ""
