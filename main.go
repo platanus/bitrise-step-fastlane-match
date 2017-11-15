@@ -22,6 +22,7 @@ import (
 // ConfigsModel ...
 type ConfigsModel struct {
 	GitURL          string
+	GitBranch       string
 	AppID           string
 	DecryptPassword string
 	Type            string
