@@ -41,6 +41,7 @@ workflows:
         run_if: false
         inputs:
         - git_url: "git@github.com/test/test.git"
+        - git_branch: "master"
         - app_id: "com.test.app"
         - type: appstore
         - decrypt_password: "match_password_test"

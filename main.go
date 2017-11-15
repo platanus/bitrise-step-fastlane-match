@@ -35,6 +35,7 @@ type ConfigsModel struct {
 func createConfigsModelFromEnvs() ConfigsModel {
 	return ConfigsModel{
 		GitURL:          os.Getenv("git_url"),
+		GitBranch:       os.Getenv("git_branch"),
 		AppID:           os.Getenv("app_id"),
 		DecryptPassword: os.Getenv("decrypt_password"),
 		Type:            os.Getenv("type"),
@@ -50,6 +51,7 @@ func (configs ConfigsModel) print() {
 	log.Infof("Configs:")
 
 	log.Printf("- GitURL: %s", configs.GitURL)
+	log.Printf("- GitBranch: %s", configs.GitBranch)
 	log.Printf("- AppID: %s", configs.AppID)
 	log.Printf("- DecryptPassword: %s", input.SecureInput(configs.DecryptPassword))
 	log.Printf("- Type: %s", configs.Type)
@@ -294,6 +296,10 @@ func main() {
 
 	args = append(args, "--git_url", configs.GitURL)
 	args = append(args, "--app_identifier", configs.AppID)
+
+	if configs.GitBranch != "" {
+		args = append(args, "--git_branch", configs.GitBranch)
+	}
 
 	args = append(args, options...)
 

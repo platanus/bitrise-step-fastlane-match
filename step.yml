@@ -73,9 +73,16 @@ inputs:
       title: "Match git url"
       summary: ""
       description: |-
-        The private git repostiry url where you have your
+        The private git repository url where you have your
         encrypted certificates and profiles
       is_required: true
+  - git_branch: ""
+    opts:
+      title: "Match git branch"
+      summary: ""
+      description: |-
+        The name of the git branch containing the encrypted
+        certificates and profiles. Uses master by default.
   - app_id: ""
     opts:
       title: "App ID"
