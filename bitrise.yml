@@ -45,6 +45,7 @@ workflows:
         - app_id: "com.test.app"
         - type: appstore
         - decrypt_password: "match_password_test"
+        - team_id: "ABC123XYZ"
     - script:
         inputs:
         - content: |
