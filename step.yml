@@ -113,6 +113,7 @@ inputs:
       - "enterprise"
   - gemfile_path: ./Gemfile
     opts:
+      category: Debug
       title: "Gemfile path"
       description: |
         Path to the Gemfile which contains `fastlane` gem.
@@ -122,9 +123,19 @@ inputs:
         - if `fastlane_version` input not specified, latest version will be used
   - fastlane_version: "latest"
     opts:
+      category: Debug
       title: "Fastlane version"
       summary: "Install a specific version of the `fastlane` gem."
       description: |-
         This option lets you specify a specific version of the `fastlane` gem to be installed.
-
+  - options:
+    opts:
+      category: Debug
+      title: "Additional options for `match` call"
+      description: |-
+        Options added to the end of the `match` call.
+        
+        If you want to add more options, list them separated by a space character.
+        
+        Example: `--team_name`
 outputs: []
