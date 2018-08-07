@@ -27,8 +27,7 @@ type ConfigsModel struct {
 	DecryptPassword string
 	Type            string
 
-	Options string
-
+	Options         string
 	GemfilePath     string
 	FastlaneVersion string
 }
@@ -41,8 +40,7 @@ func createConfigsModelFromEnvs() ConfigsModel {
 		DecryptPassword: os.Getenv("decrypt_password"),
 		Type:            os.Getenv("type"),
 
-		Options: os.Getenv("options"),
-
+		Options:         os.Getenv("options"),
 		GemfilePath:     os.Getenv("gemfile_path"),
 		FastlaneVersion: os.Getenv("fastlane_version"),
 	}
@@ -58,7 +56,6 @@ func (configs ConfigsModel) print() {
 	log.Printf("- Type: %s", configs.Type)
 
 	log.Printf("- Options: %s", configs.Options)
-
 	log.Printf("- GemfilePath: %s", configs.GemfilePath)
 	log.Printf("- FastlaneVersion: %s", configs.FastlaneVersion)
 }
