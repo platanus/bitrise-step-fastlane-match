@@ -111,6 +111,12 @@ inputs:
       - "appstore"
       - "development"
       - "enterprise"
+  - team_id: ""
+    opts:
+      title: "Team ID"
+      summary: ""
+      description: |-
+        The ID of your Developer Portal team if you're in multiple teams.
   - gemfile_path: ./Gemfile
     opts:
       title: "Gemfile path"
