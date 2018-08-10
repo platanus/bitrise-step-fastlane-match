@@ -28,8 +28,7 @@ type ConfigsModel struct {
 	Type            string
 	TeamID          string
 
-	Options string
-
+	Options         string
 	GemfilePath     string
 	FastlaneVersion string
 }
@@ -43,8 +42,7 @@ func createConfigsModelFromEnvs() ConfigsModel {
 		Type:            os.Getenv("type"),
 		TeamID:          os.Getenv("team_id"),
 
-		Options: os.Getenv("options"),
-
+		Options:         os.Getenv("options"),
 		GemfilePath:     os.Getenv("gemfile_path"),
 		FastlaneVersion: os.Getenv("fastlane_version"),
 	}
@@ -61,7 +59,6 @@ func (configs ConfigsModel) print() {
 	log.Printf("- TeamID: %s", configs.TeamID)
 
 	log.Printf("- Options: %s", configs.Options)
-
 	log.Printf("- GemfilePath: %s", configs.GemfilePath)
 	log.Printf("- FastlaneVersion: %s", configs.FastlaneVersion)
 }
